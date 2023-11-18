@@ -3,6 +3,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//01618839 - Manuella Jatobá de Figueirêdo
+//01618931 - Amanda Kawanne De Oliveira Lima
+
 public class LeituraArquivo {
 
     public static void gravarProdutoLeitura(int codigo, String nome, Double valor, int qtd){
