@@ -12,14 +12,9 @@ public class LeituraArquivo {
         ArrayList<RegProduto> listaDeProdutos = new ArrayList<>();
         listaDeProdutos.add(new RegProduto(codigo, nome, valor, qtd, categoria));
         for (RegProduto produto : listaDeProdutos) {
-            System.out.println("Código: " + produto.getCodigo());
-            System.out.println("Descrição: " + produto.getDescricao());
-            System.out.println("Preço: R$" + produto.getPreco());
-            System.out.println("Quantidade: " + produto.getQtd());
-            System.out.println();
+            System.out.println(produto.produtoInfo());
         }
     }
-
     public static void main(String[] args) {
         String caminhoArquivo = "C:\\Users\\manue\\projects\\java\\projeto-estrutura-de-dados\\leitura\\Produto.txt";
         int codigo=0;

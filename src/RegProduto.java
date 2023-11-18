@@ -37,12 +37,19 @@ public class RegProduto {
     public void setQtd(int qtd) {
         this.qtd = qtd;
     }
-
     public int getCategoria() {
         return categoria;
     }
-
     public void setCategoria(int categoria) {
         this.categoria = categoria;
+    }
+
+    public String produtoInfo() {
+        return  "Código: " + codigo + "\n" +
+                "Descrição: " + descricao + "\n" +
+                "Preço: R$" + preco + "\n" +
+                "Quantidade: " + qtd + "\n" +
+                "Categoria: " + categoria + "\n"
+                ;
     }
 }
