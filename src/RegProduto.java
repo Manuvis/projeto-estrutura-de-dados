@@ -4,12 +4,14 @@ public class RegProduto {
     private String descricao;
     private double preco;
     private int qtd;
+    private int categoria;
 
-    public RegProduto(int codigo, String descricao, double preco, int qtd) {
+    public RegProduto(int codigo, String descricao, double preco, int qtd, int categoria) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.preco = preco;
         this.qtd = qtd;
+        this.categoria = categoria;
     }
     public int getCodigo() {
         return codigo;
@@ -36,4 +38,11 @@ public class RegProduto {
         this.qtd = qtd;
     }
 
+    public int getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(int categoria) {
+        this.categoria = categoria;
+    }
 }

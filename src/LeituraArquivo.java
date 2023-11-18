@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class LeituraArquivo {
 
-    public static void gravarProdutoLeitura(int codigo, String nome, Double valor, int qtd){
+    public static void gravarProdutoLeitura(int codigo, String nome, Double valor, int qtd, int categoria){
         ArrayList<RegProduto> listaDeProdutos = new ArrayList<>();
-        listaDeProdutos.add(new RegProduto(codigo, nome, valor, qtd));
+        listaDeProdutos.add(new RegProduto(codigo, nome, valor, qtd, categoria));
         for (RegProduto produto : listaDeProdutos) {
             System.out.println("Código: " + produto.getCodigo());
             System.out.println("Descrição: " + produto.getDescricao());
-            System.out.println("Preço: " + produto.getPreco());
+            System.out.println("Preço: R$" + produto.getPreco());
             System.out.println("Quantidade: " + produto.getQtd());
             System.out.println();
         }
@@ -32,7 +32,6 @@ public class LeituraArquivo {
         try {
             File arquivo = new File(caminhoArquivo);
             Scanner leitor = new Scanner(arquivo);
-            Scanner leia = new Scanner(System.in);
             while (leitor.hasNextLine()) {
                 String linha = leitor.nextLine();
                 codigo = Integer.parseInt(linha.substring(0,2));
@@ -42,9 +41,8 @@ public class LeituraArquivo {
                 valor = valor /100;
                 qtd=Integer.parseInt(linha.substring(43,45));
                 categoria=Integer.parseInt(linha.substring(46,47));
-                gravarProdutoLeitura(codigo, nome, valor, qtd);
+                gravarProdutoLeitura(codigo, nome, valor, qtd, categoria);
                 total = total + (valor * qtd);
-
             }
             System.out.println("O total foi: " + total);
             leitor.close();
