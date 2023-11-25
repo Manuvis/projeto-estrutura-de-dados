@@ -6,7 +6,7 @@ import java.util.Scanner;
 //01618839 - Manuella Jatobá de Figueirêdo
 //01618931 - Amanda Kawanne De Oliveira Lima
 
-public class LeituraArquivo {
+public class LeituraArquivoArray {
 
     public static void gravarProdutoLeitura(int codigo, String nome, Double valor, int qtd, int categoria){
         ArrayList<RegProduto> listaDeProdutos = new ArrayList<>();
